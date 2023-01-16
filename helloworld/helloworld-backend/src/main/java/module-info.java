@@ -1,5 +1,9 @@
+import helloworld.backend.api.HelloService;
+import helloworld.backend.implementation.WelcomeHelloService;
+
 module helloworld.backend {
 
     exports helloworld.backend.api;
-    exports helloworld.backend.implementation;
+
+    provides HelloService with WelcomeHelloService;
 }

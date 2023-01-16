@@ -1,12 +1,15 @@
 package helloworld.frontend;
 
 import helloworld.backend.api.HelloService;
-import helloworld.backend.implementation.WelcomeHelloService;
+
+import java.util.ServiceLoader;
 
 public class HelloMain {
 
     public static void main(String[] args) {
-        HelloService service = new WelcomeHelloService();
+        HelloService service =
+                ServiceLoader.load(HelloService.class).findFirst().orElseThrow();
+
         System.out.println(service.sayHello("John Doe"));
     }
 }
