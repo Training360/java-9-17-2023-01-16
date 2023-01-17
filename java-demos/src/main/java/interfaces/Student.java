@@ -11,6 +11,7 @@ public class Student {
         this.email = email;
     }
 
+    // Gyártásra statikus metódus konstruktor helyett
     public static Student createWithName(String name) {
         return new Student(name, null);
     }

@@ -14,9 +14,11 @@ public class CollectionsDemo {
         List<String> names = List.of("John Doe", "Jane Doe");
 
         //names.add("Jack Doe");
+        // UnsupportedOperationException kivételt dob a set, hiszen módosíthatatlan
         names.set(0, "Jack Doe");
-        System.out.println(names);
+        //System.out.println(names);
 
+        // Ha módosíthatót akarunk, copy constructort használunk
         List<Integer> numbers = new ArrayList<>(List.of(1, 2, 3));
     }
 }
